@@ -1,0 +1,59 @@
+/* Main Colors */
+:root {
+    --main-green:#d9f87f;
+    --main-dark:#1e1e1e;
+    --main-light:#e1e1e1;
+}
+
+/* Main Styles */
+body {
+    background-color: var(--main-dark);
+    color: var(--main-light);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    overflow-x: hidden;
+}
+
+a {
+    color: var(--main-light);
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #2a2a2a;
+}
+
+footer p {
+    color: var(--main-light);
+    margin: 1rem;
+    font-size: 0.85rem;
+}
+
+footer span {
+    color: var(--main-green);
+    padding-right: 4px;
+}
+
+footer .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+}
+
+
+

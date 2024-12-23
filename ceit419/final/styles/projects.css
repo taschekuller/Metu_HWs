@@ -1,0 +1,94 @@
+.projectsContainer .row:nth-child(1){
+    display: flex;
+    justify-content: center;
+    margin-top: 72px;
+}
+.projectsContainer .row:nth-child(1) h2{
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.projectsContainer .row:nth-child(1) span{
+    font-weight: 600;
+}
+
+.projectImage {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem;
+}
+.projectImage img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.projectsContainer .row:nth-child(3){
+    margin-top: 24px;
+}
+
+.projectCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectInfo h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--main-green);
+}
+
+.projectInfo h5 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--main-light);
+}
+
+.projectInfo span p {
+    font-size: 0.9rem;
+    line-height: 1.2;
+    font-weight: 300;
+    color: rgba(225, 225, 225, 0.7);
+}
+
+.projectInfo span a img{
+    color: var(--main-green);
+    width: 18px;
+    height: 18px;
+    padding-top: 8px;
+}
+
+.projectInfo span a img:hover{
+    transform: translateY(-2px);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+    .projectInfo h3 {
+        font-size: 1.3rem;
+    }
+    .projectInfo h5 {
+        font-size: 1.1rem;
+    }
+    .projectInfo span p {
+        font-size: 0.7rem;
+    }
+    .projectInfo span a img{
+        width: 14px;
+        height: 14px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .projectImage img {
+        width: 75%;
+    }
+    .projectsContainer {
+        text-align: center;
+    }
+    .projectsContainer .row:nth-child(3) {
+        flex-direction: column-reverse;
+    }
+}

@@ -1,0 +1,156 @@
+.contactSection {
+    margin-top: 72px;
+    margin-bottom: 48px;
+}
+
+.contactSection .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactForm {
+    width: 90%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(225, 225, 225, 0.1);
+}
+
+.contactForm form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contactForm form input, textarea {
+    width: 200%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid rgba(225, 225, 225, 0.2);
+    box-shadow: 0 0 10px rgba(225, 225, 225, 0.1);
+    background: rgba(225, 225, 225, 0.3);
+    border-radius: 5px;
+}
+
+::placeholder {
+    color: rgba(225, 225, 225, 0.5);
+}
+
+.contactButtons {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 48px;
+}
+
+.contactSend{
+    padding: 10px 20px;
+    background: var(--main-green);
+    color: var(--main-dark);
+    border:1px solid var(--main-green);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contactSend:hover {
+    background-color: transparent ;
+    color: var(--main-light);
+    animation: ease-in-out 0.3;
+    transition: 0.3s;
+}
+
+.contactSocialLinks {
+    display: flex;
+    gap: 12px;
+}
+
+.contactSocialLinks a {
+    border:1px solid var(--main-green);
+    color: var(--main-light);
+    font-size: 16px;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.contactSocialLinks a:hover {
+    background: var(--main-green);
+    color: var(--main-dark);
+    transition: 0.3s;
+}
+
+.contactInfoContainer {
+    width: 90%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(225, 225, 225, 0.1);
+}
+
+.contactInfoContainer h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.contactInfoContainer h2 span {
+    color: var(--main-green);
+    font-weight: 700;
+}
+
+.contactInfoContainer p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: rgba(225, 225, 225, 0.8);
+}
+
+.contactInfo{
+    padding: 0 !important;
+}
+
+.contactInfo li i {
+    padding-right: 8px;
+}
+
+.contactInfo li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 8px 0;
+    color: var(--main-green);
+}
+
+.contactInfo li span, a {
+    color: rgba(225, 225, 225, 0.8);
+}
+
+@media screen and (max-width: 768px) {
+    .contactForm {
+        margin-bottom: 24px;
+    }
+    .contactForm form input, textarea {
+        width: 200%;
+    }
+    .contactButtons {
+        flex-direction: column;
+    }
+    .contactFormContainer {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contactForm form input, textarea {
+        width: 150%;
+    }
+}
