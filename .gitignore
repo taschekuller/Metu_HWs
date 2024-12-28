@@ -1,3 +1,31 @@
+# macOS system files
+.DS_Store
 
-.DS_Store
-.DS_Store
+# Python cache and compiled files
+__pycache__/
+*.py[cod]
+
+# Chainlit configuration and translation files
+.chainlit/config.toml
+.chainlit/translations/
+.chainlit/translations/*.json
+
+# Virtual environment files
+ceit490/w11/inClass/OpenAI/bin/
+ceit490/w11/inClass/OpenAI/lib/
+
+# pip metadata
+ceit490/w11/inClass/OpenAI/lib/python3.12/site-packages/pip-*.dist-info/
+
+# Python cache files
+ceit490/w11/inClass/OpenAI/lib/python3.12/site-packages/pip/**/*.pyc
+
+# Ensure all specific cache files are ignored
+**/__pycache__/
+
+# Other unnecessary files
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
