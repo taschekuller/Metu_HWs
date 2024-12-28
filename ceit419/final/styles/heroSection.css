@@ -13,7 +13,7 @@
 
 .heroContent, .heroImage {
     padding: 10px;
-    text-align: center; /* Optional: For better mobile alignment */
+    text-align: center; 
 }
 
 .heroImage img {

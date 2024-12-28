@@ -2,7 +2,7 @@
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding-left: 10px; /* Aligns with row negative margin */
+    padding-left: 10px; 
     padding-right: 10px;
     box-sizing: border-box;
 }
@@ -11,7 +11,7 @@
 .row {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -10px; /* Negative margins balance column padding */
+    margin-left: -10px; 
     margin-right: -10px;
 }
 

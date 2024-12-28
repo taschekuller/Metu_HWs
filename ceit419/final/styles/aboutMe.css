@@ -1,17 +1,16 @@
-.aboutMeContainer{
+.aboutMeContainer {
     margin-top: 72px;
 }
 
-.aboutMeImage{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.aboutMeGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    align-items: center; 
+    gap: 24px; 
 }
 
-.aboutMeContent{
-    display: flex;
-    flex-direction: column;
-    float: left;
+.aboutMeImage {
+    text-align: center; 
 }
 
 .aboutMeImage img {
@@ -19,28 +18,37 @@
     max-height: 350px;
 }
 
-.aboutMeContent h2{
+.aboutMeContent {
+    text-align: left;
+}
+
+.aboutMeContent h2 {
     font-size: 1.4rem;
     font-weight: 400;
 }
 
-.aboutMeContent h2 span{
+.aboutMeContent h2 span {
     font-weight: 600;
     color: var(--main-green);
 }
 
-.aboutMeContent p{
-    color: rgba(225,225,225, 0.7);
+.aboutMeContent p {
+    color: rgba(225, 225, 225, 0.7);
     font-size: 0.9rem;
+    line-height: 1.6; 
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 800px) {
+    .aboutMeGrid {
+        grid-template-columns: 1fr; 
+    }
+
     .aboutMeImage img {
-        width: 50%;
+        width: 50%; 
+        margin: 0 auto; 
     }
 
     .aboutMeContent {
-        text-align: center;
+        text-align: center; 
     }
-    
 }

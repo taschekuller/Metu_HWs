@@ -1,17 +1,17 @@
-.contactSection {
-    margin-top: 72px;
-    margin-bottom: 48px;
-}
-
 .contactSection .row {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    margin-bottom: 48px;
+    margin-top: 48px;
 }
 
 .contactForm {
-    width: 90%;
-    height: 350px;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,51 +19,82 @@
     padding: 40px 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(225, 225, 225, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
-.contactForm form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.contactForm:hover {
+    transform: scale(1.02); 
+    box-shadow: 0 0 20px var(--main-green, 0.2);
 }
 
-.contactForm form input, textarea {
-    width: 200%;
+#contactDetails {
+    color: var(--main-light);
+    padding: 8px;
+    text-align: center;
+}
+
+.contactForm form input[type="text"],
+.contactForm form textarea {
     padding: 10px;
     margin: 10px 0;
     border: 1px solid rgba(225, 225, 225, 0.2);
     box-shadow: 0 0 10px rgba(225, 225, 225, 0.1);
     background: rgba(225, 225, 225, 0.3);
     border-radius: 5px;
+    width: 95%;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.contactForm form input[type="text"]:focus,
+.contactForm form textarea:focus {
+    border-color: var(--main-green); 
+    box-shadow: 0 0 8px var(--main-green, 0.2); 
+    outline: none; 
 }
 
 ::placeholder {
     color: rgba(225, 225, 225, 0.5);
 }
 
-.contactButtons {
-    margin-top: 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 48px;
+.contactInfo li:nth-of-type(2) {
+    font-weight: bold;
+    color: var(--main-light);
 }
 
-.contactSend{
+.contactButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.contactButtons:first-child {
+    margin-right: auto;
+}
+
+.contactSocialLinks:last-child a {
+    border-color: var(--main-purple);
+}
+
+.contactSocialLinks a:visited i {
+    color: var(--main-light);
+}
+
+.contactSend {
     padding: 10px 20px;
     background: var(--main-green);
     color: var(--main-dark);
-    border:1px solid var(--main-green);
+    border: 1px solid var(--main-green);
     border-radius: 5px;
     cursor: pointer;
+    width: max-content;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
 }
 
 .contactSend:hover {
-    background-color: transparent ;
+    background-color: transparent;
     color: var(--main-light);
-    animation: ease-in-out 0.3;
-    transition: 0.3s;
+    transform: scale(1.05); 
 }
 
 .contactSocialLinks {
@@ -72,21 +103,28 @@
 }
 
 .contactSocialLinks a {
-    border:1px solid var(--main-green);
+    border: 1px solid var(--main-green);
     color: var(--main-light);
     font-size: 16px;
     padding: 8px;
     border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
 .contactSocialLinks a:hover {
     background: var(--main-green);
     color: var(--main-dark);
-    transition: 0.3s;
+}
+
+.contactInfoContainer > ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
 }
 
 .contactInfoContainer {
-    width: 90%;
+    width: 100%;
     height: 350px;
     display: flex;
     flex-direction: column;
@@ -95,6 +133,12 @@
     padding: 40px 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(225, 225, 225, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contactInfoContainer:hover {
+    transform: scale(1.02); 
+    box-shadow: 0 0 20px var(--main-green, 0.2);
 }
 
 .contactInfoContainer h2 {
@@ -113,7 +157,7 @@
     color: rgba(225, 225, 225, 0.8);
 }
 
-.contactInfo{
+.contactInfo {
     padding: 0 !important;
 }
 
@@ -127,30 +171,44 @@
     justify-content: center;
     gap: 8px;
     margin: 8px 0;
-    color: var(--main-green);
+    color: var(--main-green) !important;
 }
 
-.contactInfo li span, a {
+.contactInfo li span,
+.contactInfo li a {
     color: rgba(225, 225, 225, 0.8);
 }
 
 @media screen and (max-width: 768px) {
+    .contactSection .row {
+        grid-template-columns: 1fr;
+    }
+
     .contactForm {
         margin-bottom: 24px;
     }
-    .contactForm form input, textarea {
-        width: 200%;
+
+    .contactForm form input[type="text"],
+    textarea {
+        width: 95%;
     }
+
     .contactButtons {
         flex-direction: column;
     }
+
     .contactFormContainer {
-        width: 100%;
+        width: 96%;
+    }
+
+    .contactInfoContainer {
+        margin-left: 10px;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .contactForm form input, textarea {
-        width: 150%;
+    .contactForm form input[type="text"],
+    textarea {
+        width: 100%;
     }
 }

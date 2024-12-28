@@ -23,6 +23,7 @@
 }
 .techsetContainer h2 span{
     font-weight: 600;
+    color: var(--main-green);
 }
 
 .techsetCard{

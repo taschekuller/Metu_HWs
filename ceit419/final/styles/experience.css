@@ -1,26 +1,13 @@
-.experienceContainer{
+.experienceContainer {
     margin-top: 72px;
-}
-.experienceCard{
-    border: 1px solid var(--main-light);
-    border-radius: 8px;
-    padding: 4px;
-    margin-bottom: 24px;
-}
-
-.experienceCard:hover {
-    border: 1px solid var(--main-green);
-    background-color: #373737;
-    cursor: pointer;
-    transition: 0.3s;
-    animation: ease-in-out 0.3s;
-    box-shadow: var(--main-green, 0.25) 2px 6px 9px -3px,var(--main-green, 0.1) 0px 2px 3px -2px;
+    display: grid;
+    grid-template-columns: 1fr;
+    float: left;
+    margin-bottom: 48px;
 }
 
 .experienceSectionHeader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     margin-bottom: 24px;
 }
 
@@ -28,48 +15,57 @@
     font-weight: 400;
     color: var(--main-light);
 }
-.experienceSectionHeader h2 span{
+
+.experienceSectionHeader h2 span {
+    font-weight: 600;
+    color: var(--main-green);
+}
+
+.experienceTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 24px;
+    background-color: #1c1c1c; 
+}
+
+.experienceTable th,
+.experienceTable td {
+    padding: 16px;
+    text-align: left;
+    border: 1px solid var(--main-light);
+    font-size: 0.9rem;
+}
+
+.experienceTable th {
+    background-color: #2c2c2c; 
+    color: var(--main-light);
     font-weight: 600;
 }
 
-.experienceHeader {
-    height: 48px;
+.experienceTable td {
+    color: rgba(225, 225, 225, 0.8);
 }
 
-.experienceHeader {
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: space-between;
+.experienceTable tr:hover {
+    background-color: #373737;
+    box-shadow: var(--main-green, 0.25) 2px 6px 9px -3px,var(--main-green, 0.1) 0px 2px 3px -2px;
+    transition: 0.3s;
 }
 
-.headerLeft {
+.companyInfo {
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
-.headerLogo img{
+.companyInfo img {
     height: 24px;
     width: 24px;
-    border-radius: 25%;
-} 
+    border-radius: 50%;
+}
 
-.headerTitle {
+.companyInfo span {
     font-weight: 500;
-    font-size: 1.1rem;
-}
-
-.headerDate {
-    font-size: 0.9rem;
-    color: var(--main-green);
-}
-
-.experienceContent {
-    font-size: 0.9rem;
-    color: rgba(225, 225, 225, 0.8)
-}
-
-.experienceContent p {
-    padding-left: 1%;
+    font-size: 1rem;
+    color: var(--main-light);
 }
